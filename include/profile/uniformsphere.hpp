@@ -1,11 +1,11 @@
 #ifndef UNIFORMSPHERE_HPP_IUGZVOTP
 #define UNIFORMSPHERE_HPP_IUGZVOTP
 
-#include "galaxy/generator.hpp"
+#include "profile/generator.hpp"
 
 #include "config.hpp"
 
-namespace galaxy
+namespace profile
 {
 	class UniformSphere: public Generator
 	{
@@ -19,7 +19,7 @@ namespace galaxy
 		private:
 			F_TYPE _radius2;
 	};
-} /* galaxy */
+} /* profile */
 
 #endif /* end of include guard: UNIFORMSPHERE_HPP_IUGZVOTP */
 

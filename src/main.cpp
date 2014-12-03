@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "galaxy/uniformsphere.hpp"
+#include "profile/uniformsphere.hpp"
 
 int main(int argc, char *argv[])
 {
-	galaxy::UniformSphere sphere(10);
+	profile::UniformSphere sphere(10);
 	sphere.generate(100000);
 
 

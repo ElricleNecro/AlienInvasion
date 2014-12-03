@@ -14,22 +14,22 @@ file(
 	main.cpp
 )
 
-add_subdirectory(galaxy)
+add_subdirectory(profile)
 
 ############
 # Exécutable à construire :
 ###########################
 add_library(
-	galaxy_gen_a
+	profile_gen_a
 	STATIC
-	galaxy/generator.cpp
-	galaxy/uniformsphere.cpp
+	profile/generator.cpp
+	profile/uniformsphere.cpp
 )
 add_library(
-	galaxy_gen
+	profile_gen
 	SHARED
-	galaxy/generator.cpp
-	galaxy/uniformsphere.cpp
+	profile/generator.cpp
+	profile/uniformsphere.cpp
 )
 
 add_executable(
@@ -39,8 +39,8 @@ add_executable(
 
 target_link_libraries(
 	${EXEC_NAME}
-	galaxy_gen
+	profile_gen
 )
 
 install(TARGETS ${EXEC_NAME} DESTINATION bin)
-install(TARGETS galaxy_gen DESTINATION lib)
+install(TARGETS profile_gen DESTINATION lib)

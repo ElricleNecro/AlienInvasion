@@ -1,6 +1,7 @@
-#include "galaxy/generator.hpp"
+#include "profile/generator.hpp"
+#include "astro/star.hpp"
 
-namespace galaxy
+namespace profile
 {
 	Generator::Generator(long seed) noexcept: _seed(seed)
 	{
@@ -9,8 +10,4 @@ namespace galaxy
 	{
 	}
 
-	void Generator::generate(long N)
-	{
-	}
-
-} /* galaxy */
+} /* profile */

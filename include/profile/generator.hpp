@@ -3,7 +3,7 @@
 
 #include "config.hpp"
 
-namespace galaxy
+namespace profile
 {
 	class Generator
 	{
@@ -13,11 +13,11 @@ namespace galaxy
 
 			virtual F_TYPE profile(F_TYPE x, F_TYPE y, F_TYPE z) = 0;
 
-			void generate(long N);
+			virtual void generate(long N) = 0;
 
-		private:
+		protected:
 			long _seed;
 	};
-} /* galaxy */
+} /* profile */
 
 #endif /* end of include guard: GENERATOR_HPP_BHKGEQLN */
