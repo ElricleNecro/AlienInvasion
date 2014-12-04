@@ -15,6 +15,7 @@ namespace profile
 			virtual ~UniformSphere(void);
 
 			F_TYPE profile(F_TYPE x, F_TYPE y, F_TYPE z);
+			void generate(long N);
 
 		private:
 			F_TYPE _radius2;

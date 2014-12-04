@@ -11,6 +11,10 @@ namespace profile
 	{
 	}
 
+	void UniformSphere::generate(long N)
+	{
+		//
+	}
 
 
 	F_TYPE UniformSphere::profile(F_TYPE x, F_TYPE y, F_TYPE z)
