@@ -5,7 +5,7 @@
 
 #include "math/point.hpp"
 
-#include "config.h"
+#include "config.hpp"
 
 namespace astro
 {
