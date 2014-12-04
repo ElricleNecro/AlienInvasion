@@ -31,6 +31,7 @@ solution("AlienInvasion")
 		kind("ConsoleApp")
 
 		location("build/bin")
+		targetdir("build/bin")
 
 		files(
 			{
@@ -54,6 +55,7 @@ solution("AlienInvasion")
 		kind("SharedLib")
 
 		location("build/lib")
+		targetdir("build/lib")
 
 		files(
 			{
