@@ -16,7 +16,7 @@ namespace astro
             Star(math::Point<F_TYPE> position, F_TYPE mass);
             virtual ~Star(void);
 
-            math::Point<F_TYPE>& getPosition(void) const;
+            math::Point<F_TYPE> getPosition(void) const;
             void setPosition(math::Point<F_TYPE> position);
             void setPosition(std::initializer_list<F_TYPE> position);
 

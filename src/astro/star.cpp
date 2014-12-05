@@ -14,7 +14,7 @@ namespace astro
     {
     }
 
-    math::Point<F_TYPE>& Star::getPosition(void) const
+    math::Point<F_TYPE> Star::getPosition(void) const
     {
         return this->_position;
     }
@@ -26,10 +26,6 @@ namespace astro
     {
         // copy the position of the star
         this->_position = position;
-        // this->_position[0] = position[0];
-        // this->_position[1] = position[1];
-        // this->_position[2] = position[2];
-        // this->_position[3] = position[3];
     }
 
     F_TYPE Star::getMass(void) const
