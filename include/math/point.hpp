@@ -28,16 +28,28 @@ namespace math
 			}
 
 			Point(Point<T>& point)
-				: _pos(
-						{
-						point._pos[0],
-						point._pos[1],
-						point._pos[2],
-						point._pos[3]
-						}
-				      )
+			: _pos(
 				{
+					point._pos[0],
+					point._pos[1],
+					point._pos[2],
+					point._pos[3]
 				}
+			      )
+			{
+			}
+
+			Point(void)
+			: _pos(
+				{
+					0.,
+					0.,
+					0.,
+					0.
+				}
+			)
+			{
+			}
 
 			virtual ~Point(void)
 			{
