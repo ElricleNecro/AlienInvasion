@@ -61,7 +61,7 @@ solution("AlienInvasion")
 				"-g"
 			}
 		)
-	
+
 	includedirs(
 		{
 			"include/"
@@ -102,5 +102,17 @@ solution("AlienInvasion")
 		files(
 			{
 				"src/profile/*.cpp"
+			}
+		)
+	project("tree")
+		language("C++")
+		kind("SharedLib")
+
+		location("build/lib")
+		targetdir("build/lib")
+
+		files(
+			{
+				"src/tree/*.cpp"
 			}
 		)
