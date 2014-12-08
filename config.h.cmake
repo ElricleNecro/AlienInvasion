@@ -18,6 +18,7 @@
 #define INSTALL_DIR "@CMAKE_INSTALL_PREFIX@"
 
 #define F_TYPE @F_TYPE@
+#define I_TYPE @I_TYPE@
 
 #endif /* end of include guard */
 //vim:ft=cpp
