@@ -8,14 +8,26 @@ newoption(
 
 newoption(
 	{
-		trigger="type",
+		trigger="real-type",
 		value="TYPE",
 		description="Working type for stars coordinates.",
 	}
 )
 
-if not _OPTIONS["type"] then
-	_OPTIONS["type"] = "double"
+newoption(
+	{
+		trigger="integer-type",
+		value="TYPE",
+		description="Working type for stars coordinates.",
+	}
+)
+
+if not _OPTIONS["real-type"] then
+	_OPTIONS["real-type"] = "double"
+end
+
+if not _OPTIONS["integer-type"] then
+	_OPTIONS["integer-type"] = "long"
 end
 
 if not _OPTIONS["install-prefix"] then
@@ -27,7 +39,9 @@ print(_OPTIONS)
 io.input("config.h.cmake")
 local text = io.read("*a")
 
-text = string.gsub(text, "@F_TYPE@", _OPTIONS["type"])
+text = string.gsub(text, "@F_TYPE@", _OPTIONS["real-type"])
+text = string.gsub(text, "@I_TYPE@", _OPTIONS["integer-type"])
+
 text = string.gsub(text, "@CMAKE_INSTALL_PREFIX@", _OPTIONS["install-prefix"])
 
 text = string.gsub(text, "@PLUGIN_API_VERSION_MAJOR@", "0")
@@ -104,6 +118,7 @@ solution("AlienInvasion")
 				"src/profile/*.cpp"
 			}
 		)
+
 	project("tree")
 		language("C++")
 		kind("SharedLib")
